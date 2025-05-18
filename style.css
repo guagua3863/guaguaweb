@@ -52,9 +52,9 @@ body{
 }
 
 .article{	
-	width: 80%;
-	/*max-width: 1320px; 1296 + 24 = 1320*/
+	max-width: 1320px; /*1296 + 24 = 1320*/
 	margin: 0 auto;
+
 }
 
 .article ul{
