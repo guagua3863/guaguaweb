@@ -1,0 +1,162 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*以上css reset*/
+body{
+	background: #FBFBFB;
+}
+
+.article{	
+	width: 80%;
+	/*max-width: 1320px; 1296 + 24 = 1320*/
+	margin: 0 auto;
+}
+
+.article ul{
+	/*為了解決RWD測試時沒置中的問題，採用grid來排版*/
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, 416px);
+	grid-gap: 40px 24px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.article li{
+	width: 416px;
+	height: 476px;
+}
+
+.article img{
+	width: 416px;
+	height: 200px;
+	margin-bottom: 16px;
+}
+
+.article .date{
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #000000;
+}
+
+.article .hashtag{
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 1.5;
+	color: #0027D5;
+	text-decoration: none;
+}
+
+.article .pop{
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #FFFFFF;
+	background: #0027D5;
+	text-decoration: none;
+	text-align: center;
+	display: inline-flex;
+	vertical-align: top; /*使用垂直對齊，微微抬高文字基準線，感恩GPT讚嘆GPT(｡◕∀◕｡)*/
+	justify-content: center;
+	align-items: center; 
+	width: 88px;
+	height: 36px;
+	border-radius: 40px;
+	margin-left: 8px;
+}
+
+.article h3{
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.5;
+	color: #000000;
+	padding-bottom: 8px;
+}
+
+.article .intro{
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #4B4B4B;
+	/*以下功能幫助文字溢出時顯示"..."的效果，感恩GPT讚嘆GPT(｡◕∀◕｡)*/
+	height: 48px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;        /* 想顯示的行數，這裡是 2 行 */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 16px;
+}
+
+.article .ToContent{
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #4B4B4B;
+	text-decoration: none;
+	text-align: center;
+	display: inline-flex;
+	width: 96px;
+	height: 40px;
+	justify-content: center;
+	align-items: center; 
+	border: 1px solid #000000;
+	border-radius: 40px;
+}
+
+.article .ToContent:hover{
+	color: #FFFFFF;
+	background: #7b7b7b;
+	border: none;
+}
